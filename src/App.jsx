@@ -6,12 +6,26 @@ import Cart from './components/Cart/Cart'
 
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([])
+  const [remaining, setRemaining] = useState(0)
+  const [totalCredit, setTotalCredit] = useState(0)
   const handleSelect = (card) => {
-      const isExist = selectedCourses.find(item => item.id === card.id)
+      let countCredit = card.credit
+      let isExist = selectedCourses.find(item => item.id === card.id)
       if(isExist) {
-        alert('Already added')
+       return alert('Already added')
       }else{
-        setSelectedCourses([...selectedCourses, card])
+        selectedCourses.forEach(() => {
+          countCredit += totalCredit
+        } )
+        if(countCredit > 20){
+         return alert('Your credit limit reached')
+        }else{
+          
+          setTotalCredit(countCredit)
+          setRemaining(20 - countCredit)
+          setSelectedCourses([...selectedCourses, card])
+        }
+        
       }
       
       
@@ -22,7 +36,7 @@ function App() {
           <Header></Header>
           <div className='md:flex gap-6'>
             <Cards handleSelect={handleSelect}></Cards>
-            <Cart selectedCourses={selectedCourses}></Cart>
+            <Cart selectedCourses={selectedCourses} totalCredit={totalCredit} remaining={remaining}></Cart>
           </div>
     </div>
   )
