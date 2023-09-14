@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/fNK1HJ8/Web-Development.jpg",
+        "course_name": "Web Development Fundamentals",
+        "credit": 4,
+        "price": 49,
+        "course_details": "Learn the basics of HTML, CSS, and JavaScript to kickstart your web development journey."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/dr8fL0z/pythoncourse.png",
+        "course_name": "Python Programming for Beginners",
+        "credit": 3,
+        "price": 39,
+        "course_details": "A comprehensive introduction to Python programming for beginners, including hands-on coding exercises."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/N35mJkb/mechine-larning.jpg",
+        "course_name": "Machine Learning Fundamentals",
+        "credit": 5,
+        "price": 79,
+        "course_details": "Explore the world of machine learning, from data preprocessing to building predictive models."
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/zS8zmtZ/digital-marketing.jpg",
+        "course_name": "Digital Marketing Mastery",
+        "credit": 4,
+        "price": 59,
+        "course_details": "Learn the ins and outs of digital marketing, including SEO, social media, and email campaigns."
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/x7yZDZ3/graphics-design.png",
+        "course_name": "Graphic Design Essentials",
+        "credit": 3,
+        "price": 44,
+        "course_details": "Master the fundamentals of graphic design, including Adobe Photoshop and Illustrator."
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/3NW1GDr/cyber.webp",
+        "course_name": "Cybersecurity Basics",
+        "credit": 4,
+        "price": 69,
+        "course_details": "Get a foundational understanding of cybersecurity, including network security and ethical hacking."
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/W0MTzVv/Does-Data.jpg",
+        "course_name": "Data Science for Beginners",
+        "credit": 3,
+        "price": 49,
+        "course_details": "Introduction to data science concepts, data analysis, and visualization using Python."
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/L56SYZc/mobile-app.jpg",
+        "course_name": "Mobile App Development with React Native",
+        "credit": 4,
+        "price": 59,
+        "course_details": "Build cross-platform mobile apps using React Native, including hands-on projects."
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co/8YBmKV1/artificial-int.jpg",
+        "course_name": "Artificial Intelligence and Ethics",
+        "credit": 3,
+        "price": 54,
+        "course_details": "Explore the ethical implications of AI and machine learning in today's society."
+    }
+]
