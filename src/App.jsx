@@ -1,8 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Cards from "./components/Cards/Cards";
 import Cart from "./components/Cart/Cart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -14,16 +16,34 @@ function App() {
     let countPrice = card.price;
     let isExist = selectedCourses.find((item) => item.id === card.id);
     if (isExist) {
-      return alert("Already added");
+      return toast.warn('You Have Already Added This Course', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       selectedCourses.forEach(() => {
         countCredit += totalCredit;
-        countPrice += totalPrice
+        countPrice += totalPrice;
       });
       if (countCredit > 20) {
-        return alert("Your credit limit reached");
+        toast.warn('Your Credit Limit Reached', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       } else {
-        setTotalPrice(countPrice)
+        setTotalPrice(countPrice);
         setTotalCredit(countCredit);
         setRemaining(20 - countCredit);
         setSelectedCourses([...selectedCourses, card]);
@@ -33,6 +53,7 @@ function App() {
 
   return (
     <div className="max-w-[1440px] mx-auto px-14">
+      <ToastContainer  autoClose={3000} />
       <Header></Header>
       <div className="md:flex gap-6">
         <Cards handleSelect={handleSelect}></Cards>
