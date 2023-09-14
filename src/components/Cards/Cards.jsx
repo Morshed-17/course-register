@@ -10,7 +10,8 @@ const Cards = props => {
     .then(data => setCards(data))
   }, [])
   return (
-    <div className='md:grid md:grid-cols-3 gap-6 md:w-[75%]'>
+    <div className='md:grid md:grid-cols-3 gap-6 md:w-[75%] mb-6
+    '>
         {
             cards.map(card => <Card key={card.id} card={card}></Card>)
         }

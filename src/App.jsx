@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='max-w-[1440px] mx-auto py-14'>
+    <div className='max-w-[1440px] mx-auto px-14'>
           <Header></Header>
           <div className='md:flex gap-6'>
             <Cards></Cards>
