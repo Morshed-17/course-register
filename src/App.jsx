@@ -11,6 +11,8 @@ function App() {
   const [remaining, setRemaining] = useState(20);
   const [totalCredit, setTotalCredit] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+
+
   const handleSelect = (card) => {
     let countCredit = card.credit;
     let countPrice = card.price;
@@ -27,9 +29,9 @@ function App() {
         theme: "light",
         });
     } else {
-      selectedCourses.forEach(() => {
-        countCredit += totalCredit;
-        countPrice += totalPrice;
+      selectedCourses.forEach((item) => {
+        countCredit += item.credit;
+        countPrice += item.price;
       });
       if (countCredit > 20) {
         toast.warn('Your Credit Limit Reached', {
