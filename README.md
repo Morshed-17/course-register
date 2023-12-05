@@ -1,3 +1,5 @@
+### live: https://shallow-industry.surge.sh/
+
 # main Features of the website
 
 ## 1. All the course cards are dynamic. The card contents are fetched by using useEffect hook.
